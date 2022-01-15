@@ -1,0 +1,2 @@
+# gslmetamodel
+This experimentation project is situated in the framework of a research work (Spatially explicit agent-based modelling). It constitutes an actor meta-model used to easily and quickly produce a spatially explicit agent-based model from specifications provided jointly by domain experts and system analysts. Then, a generator engine called ABMGenerator is produced as a tool to support the agent-based modelling process with GAMA platform
