@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated gsl -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="gamamodel.presentation.GamamodelModelWizardID"
+            name="%_UI_GamamodelModelWizard_label"
+            class="gamamodel.presentation.GamamodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GamamodelModelFile.gif">
+         <description>%_UI_GamamodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated gsl -->
+      <editor
+            id="gamamodel.presentation.GamamodelEditorID"
+            name="%_UI_GamamodelEditor_label"
+            icon="icons/full/obj16/GamamodelModelFile.gif"
+            extensions="gamamodel"
+            class="gamamodel.presentation.GamamodelEditor"
+            contributorClass="gamamodel.presentation.GamamodelActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
