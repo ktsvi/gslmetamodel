@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/eclipse.emf.gsl/src" modelPluginID="eclipse.emf.gsl"
+    modelName="Gsl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Gsl.ecore</foreignModel>
+  <genPackages prefix="Gamamodel" disposableProviderFactory="true" ecorePackage="Gsl.ecore#/">
+    <genClasses ecoreClass="Gsl.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Action/actionName"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//ExperimentBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//ExperimentBlock/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//ExperimentBlock/experimentName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//ExperimentBlock/hasparameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//ExperimentBlock/hasoutput"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//ComplexeAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//ComplexeAction/id"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Gamamodel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Gamamodel/modelName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Gamamodel/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Gamamodel/keywords"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Gamamodel/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Gamamodel/createdOn"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Gamamodel/containsglobal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Gamamodel/containsspecie"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Gamamodel/containsexperiment"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Output">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Output/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Output/hasdisplays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Output/hasexportfile"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Output/hasmonitor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Output/outputName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Output/framerate"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Reflex">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Reflex/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Reflex/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//SpecieBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpecieBlock/specieBlockName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpecieBlock/aspectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpecieBlock/Color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//SpecieBlock/containsaction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpecieBlock/initfunction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpecieBlock/aspectfunction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//SpecieBlock/haspropertie"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpecieBlock/skillofspecie"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Display">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Display/displayName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Display/displayType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Display/specieblock"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//GlobalVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//GlobalVariable/gvarName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//GlobalVariable/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//GlobalVariable/initValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//GlobalBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//GlobalBlock/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//GlobalBlock/init"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//GlobalBlock/containsglobalvariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//GlobalBlock/hasspatialentity"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Exportfile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Exportfile/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Exportfile/fileType"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Parameter/parameterName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Parameter/targetVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Parameter/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Parameter/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Parameter/categorie"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//simpleAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//simpleAction/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//simpleAction/ReturnType"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Propertie">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Propertie/propertieName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Propertie/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Propertie/initValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//SpatialEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpatialEntity/shapeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpatialEntity/shapePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//SpatialEntity/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Inspector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Inspector/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Inspector/specieValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Inspector/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gsl.ecore#//Inspector/hasinspector"/>
+    </genClasses>
+    <genClasses ecoreClass="Gsl.ecore#//Monitor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Monitor/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gsl.ecore#//Monitor/targetVar"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
